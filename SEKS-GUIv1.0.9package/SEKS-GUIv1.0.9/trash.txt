@@ -1,0 +1,21 @@
+  example01                 - Example VI.3.4 : Using probabilistic data from a secondary variable
+ 
+  There are 25 hard data randomly located and 400 soft 
+  probabilistic data at the nodes of a 20 x 20 grid. The soft 
+  pdf are obtained by conditioning with respect to two classes 
+  (value<0 or value>0) the variables of interest, using a
+  secondary variable correlated with the first one (rho=0.9).
+  The objective is to predict at best the values at the nodes
+  of the grid. Three approaches are proposed : 
+ 
+  1- kriging with only 25 hard data
+  2- kriging with 25 hard data and the conditional soft pdf at
+     prediction point taken as "hardened" value
+  3- bme with rigorous incorporation of hard data and the
+     soft pdf at the estimation point
+ 
+  The first approach is deficient because it does not make use of
+  the 400 soft data. For the second approach, because kriging is
+  an exact predictor, using as hard data the expectation of the pdf
+  does not allow to take into account the hard data at all. Only BME
+  is doing a correct job in this case.
